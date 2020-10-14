@@ -1,0 +1,97 @@
+@import '../../css/utils/functionUtils.scss';
+.navBar {
+  display: flex;
+}
+
+.navBar {
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+
+    li {
+      margin: 15px;
+      transform: rotate(-2deg);
+
+      &:nth-child(1):hover {
+        transform: rotate(-5deg);
+      }
+      &:nth-child(2):hover {
+        transform: rotate(-5deg);
+      }
+      &:nth-child(4):hover {
+        transform: rotate(2.5deg);
+      }
+      &:hover {
+        transform: rotate(3deg);
+      }
+      a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+.melissaslice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  top: -4rem;
+  background-color: white;
+  padding: 3px;
+  box-shadow: 2px 1px 5px 1px rgba(50, 50, 50, 0.2);
+  background: white url('../../image/bord.svg');
+  border: 0.5rem solid white;
+}
+
+.est {
+  font-size: 0.7rem;
+}
+
+.centralNavItem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+}
+
+.lettersContainer {
+  color: red;
+  display: flex;
+  flex-direction: row;
+  font-size: 2rem;
+  font-style: italic;
+  padding: 4px;
+  transform: translateY(-0.3em);
+}
+
+.slice {
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  padding: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  .navBar {
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .melissaslice {
+    top: -1rem;
+    position: relative;
+    order: -1;
+  }
+}
