@@ -1,0 +1,16 @@
+.containerImage {
+  display: flex;
+  flex-direction: row;
+}
+
+.imageCard {
+  max-width: 12rem;
+  margin: 1rem;
+}
+
+@media screen and (max-width: 750px) {
+  .imageCard {
+    max-width: 5rem;
+    margin: 1rem;
+  }
+}

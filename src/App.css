@@ -42,3 +42,35 @@
     transform: rotate(360deg);
   }
 }
+
+.AppImageContainer {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+.AppImageBlock {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+}
+
+.AppImageItems {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (max-width: 750px) {
+  .AppImageContainer {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .AppImageItems {
+    display: flex;
+    flex-direction: column;
+  }
+}
