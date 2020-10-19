@@ -9,7 +9,9 @@ type TextMarkType = {
 const TextMark: FunctionComponent<TextMarkType> = ({ text, markDetail }) => {
   return (
     <div className={style.mark}>
-      {text}-{markDetail}
+      <p>
+        {text}-{markDetail}
+      </p>
     </div>
   )
 }

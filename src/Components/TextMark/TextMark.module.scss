@@ -1,4 +1,34 @@
+@import '../../css/utils/constans.scss';
+$heightMedia: 0.5rem;
+$heightNormal: 1.5rem;
+
 .mark {
   text-align: center;
   position: relative;
+  left: 9rem;
+  max-width: 12rem;
+  background-color: $yellow;
+  height: $heightNormal;
+  display: flex;
+  align-items: center;
+}
+
+.yellowMark {
+  background-color: $yellow;
+}
+
+@media screen and (max-width: 750px) {
+  .mark {
+    text-align: center;
+    position: relative;
+    left: 0rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .yellowMark,
+  .markGreen,
+  .MarkRed {
+    height: $heightMedia;
+  }
 }

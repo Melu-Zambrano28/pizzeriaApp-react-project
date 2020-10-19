@@ -1,4 +1,3 @@
-import { type } from 'os'
 import React, { Fragment } from 'react'
 import style from './NavBarComponent.module.scss'
 
