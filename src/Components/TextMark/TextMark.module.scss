@@ -2,33 +2,43 @@
 $heightMedia: 0.5rem;
 $heightNormal: 1.5rem;
 
-.mark {
+@mixin textMark() {
   text-align: center;
   position: relative;
-  left: 9rem;
+  left: 8rem;
   max-width: 12rem;
-  background-color: $yellow;
   height: $heightNormal;
   display: flex;
   align-items: center;
+  padding: 0px 2px 2px;
+}
+
+.mark {
+  @include textMark();
 }
 
 .yellowMark {
   background-color: $yellow;
+  @include textMark();
+}
+
+.greenMark {
+  background-color: $darkGreen;
+  @include textMark();
+}
+.whiteMark {
+  background-color: $white;
+  @include textMark();
 }
 
 @media screen and (max-width: 750px) {
-  .mark {
+  .mark,
+  .yellowMark,
+  .greenMark {
     text-align: center;
     position: relative;
-    left: 0rem;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .yellowMark,
-  .markGreen,
-  .MarkRed {
-    height: $heightMedia;
+    left: 5rem;
+    max-width: 6rem;
+    padding: 1px;
   }
 }

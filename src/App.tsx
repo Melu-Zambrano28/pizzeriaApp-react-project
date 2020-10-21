@@ -4,33 +4,48 @@ import { ContainerComponent } from './Components/ContainerComponent/ContainerCom
 import { NavBarComponent } from './Components/NavBarComponent/NavBarComponent'
 import { CardComponent } from './Components/CardComponent/CardComponent'
 import { allImages, allPizzaImages } from './mocks/CardMocks'
-import { TextMark } from './Components/TextMark/TexMark'
+import { Announcement } from './Components/Announcement/Announcement'
 
 function App() {
   return (
     <div className="App">
       <ContainerComponent>
         <NavBarComponent />
-
+        <Announcement title="The best pizza in Milan!" announcement="Open 19pm to 2am Every Single Day" />
         <div className="AppImageContainer">
           <div className="AppImageBlock">
             <div className="AppImageItems">
               {allImages.map((img, index) => {
                 return (
-                  <Fragment key={`fragment${index}`}>
-                    <TextMark key={`textMarkId${index}`} text="ciao" markDetail="red" />
-                    <CardComponent key={`cardId${index}`} path={img.path} description={img.description} />
+                  <Fragment key={`fragmentPersonImages${index}`}>
+                    <CardComponent
+                      key={`cardId${index}`}
+                      path={img.path}
+                      description={img.description}
+                      textMark={img.textMark}
+                      backgroundMark={img.backgroundMark}
+                    />
                   </Fragment>
                 )
               })}
             </div>
           </div>
 
-          <div className="AppImageBlock">
+          <div className="AppImagePizzaBlock">
             <div className="AppImageItems">
-              {allPizzaImages.map((imgPizza, indexPizza) => (
-                <CardComponent key={indexPizza} path={imgPizza.path} description={imgPizza.description} />
-              ))}
+              {allPizzaImages.map((imgPizza, indexPizza) => {
+                return (
+                  <Fragment key={`fragmentPizzaImages${indexPizza}`}>
+                    <CardComponent
+                      key={`cardId${indexPizza}`}
+                      path={imgPizza.path}
+                      description={imgPizza.description}
+                      textMark={imgPizza.textMark}
+                      backgroundMark={imgPizza.backgroundMark}
+                    />
+                  </Fragment>
+                )
+              })}
             </div>
           </div>
         </div>

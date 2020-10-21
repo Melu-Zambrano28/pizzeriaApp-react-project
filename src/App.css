@@ -59,6 +59,28 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  flex-grow: 1;
+}
+
+.AppImagePizzaBlock {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+}
+
+.AppImagePizzaItems {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 750px) {
+  .AppImageBlock {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -69,8 +91,9 @@
 }
 
 @media screen and (max-width: 750px) {
-  .AppImageItems {
-    display: flex;
-    flex-direction: column;
+  .AppImageItems,
+  .AppImagePizzaItems {
+    max-width: 9rem;
+    justify-content: flex-end;
   }
 }
