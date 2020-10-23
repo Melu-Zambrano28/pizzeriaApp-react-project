@@ -1,4 +1,4 @@
-import React, { FunctionComponent, Fragment } from 'react'
+import React, { FunctionComponent } from 'react'
 import style from './Announcement.module.scss'
 
 type AnnouncementType = {

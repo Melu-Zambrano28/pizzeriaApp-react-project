@@ -1,0 +1,46 @@
+@import '../../css/utils/constans.scss';
+
+.homeCotainerTit {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  bottom: 3rem;
+}
+
+.homeItemsTit {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin: 1rem;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+.homePubTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  h1 {
+    background-color: $yellow;
+    padding: 1px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .homeCotainerTit {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 8px;
+    text-align: justify;
+    bottom: 1rem;
+  }
+  .homePubTitle {
+    max-width: 50%;
+    p {
+      font-size: 1rem;
+    }
+  }
+}

@@ -13,7 +13,7 @@ type cardType = {
 const CardComponent: React.FunctionComponent<cardType> = ({ path, description, textMark, backgroundMark }) => {
   return (
     <div className={style.containerImage}>
-      <TextMark text={textMark} backgroundMark={backgroundMark} />
+      <TextMark text={textMark} markClass={backgroundMark} />
       <img className={style.imageCard} src={path} alt={description} />
     </div>
   )

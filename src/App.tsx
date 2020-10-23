@@ -1,6 +1,5 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import './App.css'
-import { Announcement } from './Components/Announcement/Announcement'
 import { ContainerComponent } from './Components/ContainerComponent/ContainerComponent'
 import { NavBarComponent } from './Components/NavBarComponent/NavBarComponent'
 

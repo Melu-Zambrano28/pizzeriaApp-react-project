@@ -16,3 +16,15 @@ $borderImage: '../../image/bord.svg';
   flex-direction: column;
   background: white;
 }
+
+@media screen and (max-width: 750px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .itemInfo {
+    display: flex;
+    flex-direction: column;
+  }
+}

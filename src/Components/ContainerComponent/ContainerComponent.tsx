@@ -1,4 +1,4 @@
-import React, { Children, Component, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import style from './ContainerComponent.module.scss'
 
 const ContainerComponent: React.FunctionComponent = ({ children }) => {

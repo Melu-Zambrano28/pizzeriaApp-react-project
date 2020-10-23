@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { Announcement } from '../Announcement/Announcement'
 import { Home } from '../Home/Home'
+import { PizzaMenu } from '../PizzaMenu/PizzaMenu'
 import style from './NavBarComponent.module.scss'
 
 const NavBarComponent: React.FunctionComponent = () => {
@@ -11,7 +12,7 @@ const NavBarComponent: React.FunctionComponent = () => {
         <nav className={style.navBar}>
           <ul className={style.active}>
             <li className={style.hotnow}>
-              <Link to="/home">HOME</Link>
+              <Link to="/">HOME</Link>
             </li>
             <li className={style.pizzamenu}>
               <Link to="/pizzamenu">PIZZA MENU</Link>
@@ -53,11 +54,12 @@ const NavBarComponent: React.FunctionComponent = () => {
         {
           /*Caricamento dei componenti secondo il router assegnato*/
           <Switch>
-            <Route path="/home">
+            <Route exact path="/">
               <Home>
                 <Announcement title="The best pizza in Milan!" announcement="Open 19pm to 2am Every Single Day" />
               </Home>
             </Route>
+            <Route path="/pizzamenu" component={PizzaMenu}></Route>
           </Switch>
         }
       </Fragment>

@@ -1,11 +1,28 @@
 import React, { Fragment, FunctionComponent } from 'react'
 import { allImages, allPizzaImages } from '../../mocks/CardMocks'
 import { CardComponent } from '../CardComponent/CardComponent'
+import { TextMark } from '../TextMark/TexMark'
+import style from './Home.module.scss'
 
 const Home: FunctionComponent = ({ children }) => {
   return (
     <Fragment>
       {children}
+      <div className={style.homeCotainerTit}>
+        <div className={style.homeItemsTit}>
+          <div className={style.homePubTitle}>
+            <h1>OUR SPECIAL TEAM</h1>
+            <p>Standing by, ready to slice you up!</p>
+          </div>
+        </div>
+        <div className={style.homeItemsTit}>
+          <div className={style.homePubTitle}>
+            <h1>OUR PIZZAS</h1>
+            <p>Come on by, buy the slice!</p>
+          </div>
+        </div>
+      </div>
+
       <div className="AppImageContainer">
         <div className="AppImageBlock">
           <div className="AppImageItems">
