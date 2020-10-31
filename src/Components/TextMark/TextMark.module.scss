@@ -30,8 +30,8 @@
 }
 
 .greenMark {
-  background-color: $darkGreen;
   @include textMark();
+  background-color: $darkGreen;
 }
 
 .whiteMark {

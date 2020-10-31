@@ -6,15 +6,18 @@ type cardType = {
   id?: number
   path: string
   description: string
-  textMark: string
+  textmarkCopy: string
   backgroundMark?: string | undefined
 }
 
-const CardComponent: React.FunctionComponent<cardType> = ({ path, description, textMark, backgroundMark }) => {
+const CardComponent: React.FunctionComponent<cardType> = ({ path, description, textmarkCopy, backgroundMark }) => {
   return (
     <div className={style.containerImage}>
-      <TextMark text={textMark} markClass={backgroundMark} />
-      <img className={style.imageCard} src={path} alt={description} />
+      {/* <TextMark text={textmarkCopy} markClass={backgroundMark} /> */}
+      <div className={style.textmark}>{textmarkCopy}</div>
+      <div className={style.contentImage}>
+        <img className={style.imageCard} src={path} alt={description} />
+      </div>
     </div>
   )
 }
